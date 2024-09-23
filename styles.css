@@ -1,0 +1,12 @@
+.font-lex{
+    font-family: "Lexend", sans-serif;
+}
+.activeBTN{
+    background: #b4f461;
+    color: #000!important;
+    border: none;
+}
+.btn:hover{
+    background: #b4f461!important;
+    color: #000;
+}
