@@ -40,25 +40,27 @@
     </header>
 
     <main class="w-full">
+
         <!-- BUTTONS START -->
 
         <section class="container mx-auto">
             <div class="py-8 flex justify-center">
-                <button class="activeBTN border-[#c1c1c1] btn mr-2 px-6 text-[#6d6d6d] text-xl">Donation</button>
-                <button class="bg-transparent border-[#c1c1c1] btn mr-2 px-6 text-[#6d6d6d] text-xl">History</button>
+                <button id="DonatBTN" class="activeBTN border-[#c1c1c1] btn mr-2 px-6 text-[#6d6d6d] text-xl">Donation</button>
+                <button id="transBTN" class="border-[#c1c1c1] btn mr-2 px-6 text-[#6d6d6d] text-xl">History</button>
             </div>
-        </section>
+        </section> 
 
         <!-- BUTTONS END -->
 
-        <section class="container mx-auto">
-            <!-- POST START -->
+        <!-- POST START -->
 
-            <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto">
-                <div class="hero-content flex-col lg:flex-row gap-8">
+        <section id="posts" class="container mx-auto">
+
+            <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto mb-10">
+                <div class="hero-content flex-col lg:flex-row gap-8"> <!-- Make this div to take full width of his parent -->
                     <!-- HERO IMG -->
-                    <div class="basis-[40%] h-[350px]"> 
-                        <img src="img/noakhali.png" class="w-full h-full object-cover rounded-lg shadow-2xl" />
+                    <div class="basis-[40%] h-[380px]"> 
+                        <img src="img/noakhali.png" class="w-screen h-full object-cover rounded-lg shadow-2xl" />
                     </div> 
 
                     <!-- HERO CONTENT -->
@@ -75,17 +77,16 @@
                         </p>
                         <input type="text" placeholder="Write Donation Amount" id="tkInput" class="input input-bordered w-full mb-3" />
                         <br>
-                        <button id="subBTN" class="btn btn-primary w-full">Get Started</button>
+                        <button id="subBTN" class="btn bg-[#b4f461] text-[#000] border-transparent  w-full">Donate Now</button>
                     </div>
-                </div>
-                
+                </div> 
             </div>
 
-            <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto">
+            <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto mb-10">
                 <div class="hero-content flex-col lg:flex-row gap-8">
                     <!-- HERO IMG -->
-                    <div class="basis-[40%] h-[350px]"> 
-                        <img src="img/feni.png" class="w-full h-full object-cover rounded-lg shadow-2xl" />
+                    <div class="basis-[40%] h-[380px]"> 
+                        <img src="img/feni.png" class="w-screen h-full object-cover rounded-lg shadow-2xl" />
                     </div> 
 
                     <!-- HERO CONTENT -->
@@ -102,7 +103,7 @@
                         </p>
                         <input type="text" placeholder="Write Donation Amount" id="tkInput2" class="input input-bordered w-full mb-3" />
                         <br>
-                        <button id="subBTN2" class="btn btn-primary w-full">Get Started</button>
+                        <button id="subBTN2" class="btn bg-[#b4f461] w-full">Donate Now</button>
                     </div>
                 </div>
                 
@@ -111,8 +112,8 @@
             <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto">
                 <div class="hero-content flex-col lg:flex-row gap-8">
                     <!-- HERO IMG -->
-                    <div class="basis-[40%] h-[350px]"> 
-                        <img src="img/quota-protest.png" class="w-full h-full object-cover rounded-lg shadow-2xl" />
+                    <div class="basis-[40%] h-[380px]"> 
+                        <img src="img/quota-protest.png" class="w-screen h-full object-cover rounded-lg shadow-2xl" />
                     </div> 
 
                     <!-- HERO CONTENT -->
@@ -129,18 +130,23 @@
                         </p>
                         <input type="text" placeholder="Write Donation Amount" id="tkInput3" class="input input-bordered w-full mb-3" />
                         <br>
-                        <button id="subBTN3" class="btn btn-primary w-full">Get Started</button>
+                        <button id="subBTN3" class="btn bg-[#b4f461] w-full">Donate Now</button>
                     </div>
                 </div>
                 
             </div>
 
-            <!-- POST END -->
+        </section>
+
+        <!-- POST START -->
+
+        <section id="transaction" class="hidden">
+            <h1 class="text-5xl">TRANSACTION</h1>
         </section>
 
     </main>
 
-    <footer>
+    <footer class="h-24 w-full bg-[#f9f7f3] mt-8">
 
     </footer>
 
