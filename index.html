@@ -15,7 +15,7 @@
 </head>
 
 <body class="font-lex">
-    <header class="w-full bg-[#f9f7f3]">
+    <header class="w-full bg-[#f9f7f3] sticky top-0 z-10 shadow-md">
         <nav class="container mx-auto">
             <div class="navbar bg-[#f9f7f3] py-4">
                 <div class="navbar-start">
@@ -45,23 +45,24 @@
 
         <section class="container mx-auto">
             <div class="py-8 flex justify-center">
-                <button id="DonatBTN" class="activeBTN border-[#c1c1c1] btn mr-2 px-6 text-[#6d6d6d] text-xl">Donation</button>
+                <button id="DonatBTN"
+                    class="activeBTN border-[#c1c1c1] btn mr-2 px-6 text-[#6d6d6d] text-xl">Donation</button>
                 <button id="transBTN" class="border-[#c1c1c1] btn mr-2 px-6 text-[#6d6d6d] text-xl">History</button>
             </div>
-        </section> 
+        </section>
 
         <!-- BUTTONS END -->
 
         <!-- POST START -->
 
-        <section id="posts" class="container mx-auto">
+        <section id="posts" class="container mx-auto roun">
 
             <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto mb-10">
-                <div class="hero-content flex-col lg:flex-row gap-8"> <!-- Make this div to take full width of his parent -->
+                <div class="hero-content flex-col lg:flex-row gap-8">
                     <!-- HERO IMG -->
-                    <div class="basis-[40%] h-[380px]"> 
+                    <div class="basis-[40%] h-[380px]">
                         <img src="img/noakhali.png" class="w-screen h-full object-cover rounded-lg shadow-2xl" />
-                    </div> 
+                    </div>
 
                     <!-- HERO CONTENT -->
 
@@ -71,23 +72,29 @@
                             <h3 id="CurrentFund" class="text-[#555555] font-normal text-xl ml-2">8200</h3>
                             <span class="text-[#555555] font-normal text-xl ml-1">BDT</span>
                         </div>
-                        <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+
+                        <h1 id="post1" class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="py-6">
-                            The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies and support to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                            The recent floods in Noakhali have caused significant damage to homes and infrastructure.
+                            Your donation will help provide essential supplies and support to those affected by this
+                            disaster. Every contribution, big or small, makes a difference. Please join us in supporting
+                            the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" id="tkInput" class="input input-bordered w-full mb-3" />
+                        <input type="text" placeholder="Write Donation Amount" id="tkInput"
+                            class="input input-bordered w-full mb-3" />
                         <br>
-                        <button id="subBTN" class="btn bg-[#b4f461] text-[#000] border-transparent  w-full">Donate Now</button>
+                        <button id="subBTN"
+                            class="btn bg-[#b4f461] text-[#000] border-transparent text-xl  w-full">Donate Now</button>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto mb-10">
                 <div class="hero-content flex-col lg:flex-row gap-8">
                     <!-- HERO IMG -->
-                    <div class="basis-[40%] h-[380px]"> 
+                    <div class="basis-[40%] h-[380px]">
                         <img src="img/feni.png" class="w-screen h-full object-cover rounded-lg shadow-2xl" />
-                    </div> 
+                    </div>
 
                     <!-- HERO CONTENT -->
 
@@ -97,24 +104,30 @@
                             <h3 id="CurrentFund2" class="text-[#555555] font-normal text-xl ml-2">12100</h3>
                             <span class="text-[#555555] font-normal text-xl ml-1">BDT</span>
                         </div>
-                        <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                        <h1 id="post2" class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <p class="py-6">
-                            The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                            The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" id="tkInput2" class="input input-bordered w-full mb-3" />
+                        <input type="text" placeholder="Write Donation Amount" id="tkInput2"
+                            class="input input-bordered w-full mb-3" />
                         <br>
-                        <button id="subBTN2" class="btn bg-[#b4f461] w-full">Donate Now</button>
+                        <button id="subBTN2" class="btn bg-[#b4f461] w-full text-xl">Donate Now</button>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="hero mx-auto border-[#ece6e6] border-2 rounded-2xl w-[90%] md:w-auto">
                 <div class="hero-content flex-col lg:flex-row gap-8">
                     <!-- HERO IMG -->
-                    <div class="basis-[40%] h-[380px]"> 
+                    <div class="basis-[40%] h-[380px]">
                         <img src="img/quota-protest.png" class="w-screen h-full object-cover rounded-lg shadow-2xl" />
-                    </div> 
+                    </div>
 
                     <!-- HERO CONTENT -->
 
@@ -124,16 +137,22 @@
                             <h3 id="CurrentFund3" class="text-[#555555] font-normal text-xl ml-2">2400</h3>
                             <span class="text-[#555555] font-normal text-xl ml-1">BDT</span>
                         </div>
-                        <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
+                        <h1 id="post3" class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
                         <p class="py-6">
-                            The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                            The recent Quota movement has resulted in numerous injuries and significant hardship for
+                            many individuals. Your support is crucial in providing medical assistance, rehabilitation,
+                            and necessary supplies to those affected. By contributing, you help ensure that injured
+                            individuals receive the care and support they need during this challenging time. Every
+                            donation plays a vital role in alleviating their suffering and aiding in their recovery.
+                            Please consider making a donation to support these brave individuals in their time of need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" id="tkInput3" class="input input-bordered w-full mb-3" />
+                        <input type="text" placeholder="Write Donation Amount" id="tkInput3"
+                            class="input input-bordered w-full mb-3" />
                         <br>
-                        <button id="subBTN3" class="btn bg-[#b4f461] w-full">Donate Now</button>
+                        <button id="subBTN3" class="btn bg-[#b4f461] w-full text-xl">Donate Now</button>
                     </div>
                 </div>
-                
+
             </div>
 
         </section>
@@ -141,7 +160,6 @@
         <!-- POST START -->
 
         <section id="transaction" class="hidden">
-            <h1 class="text-5xl">TRANSACTION</h1>
         </section>
 
     </main>
@@ -150,7 +168,29 @@
 
     </footer>
 
+    <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+    <dialog id="my_modal_4" class="modal">
+        <div class="modal-box w-96 max-w-5xl flex flex-col justify-center items-center">
+            <h3 class="text-5xl font-bold mb-4">Congrates!</h3>
+            <img src="img/coin.png" class="w-12 h-12" alt="">
+            <p class="py-2">You Have Donated for Humankind</p>
+            <p class="py-2 text-xl font-bold">SUCCESSFULL</p>
+            <div class="modal-action mt-3">
+                <form method="dialog">
+                    <!-- if there is a button, it will close the modal -->
+                    <button class="btn">Close Confirmation</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+
+
+
     <script src="JS/basic.js"></script>
     <script src="JS/utilities.js"></script>
+
+
 </body>
+
 </html>

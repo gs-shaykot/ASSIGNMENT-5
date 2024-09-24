@@ -13,15 +13,24 @@ function getMoneyInNumber(id) {
 }
 
 // FINANCE CALCULATION
+
 function FinanceCalculation(getip, availFund, availBal) {
     const FundCollected = getMoneyInNumber(availFund);
     const BalanceInWallet = getMoneyInNumber(availBal);
-    const NewFund = FundCollected + getip;
-    const NewWallet = BalanceInWallet - getip
-    document.getElementById(availFund).innerText = NewFund;
+    
+    // Check if BalanceInWallet is greater than getip
+    if (BalanceInWallet >= getip) {  // Ensure balance is enough
+        const NewFund = FundCollected + getip;
+        const NewWallet = BalanceInWallet - getip;
 
-    document.getElementById(availBal).innerText = NewWallet;
+        document.getElementById(availFund).innerText = NewFund;
+        document.getElementById(availBal).innerText = NewWallet;
 
+        my_modal_4.showModal()
+
+    } else {
+        alert('Not Enough Balance');  // Show alert if balance is insufficient
+    }
 }
 
 // INPUT VALIDATION
@@ -36,6 +45,32 @@ function BalnaceSubmission(inputId, fundId, walletId) {
         alert('Please Enter More than ZERO');
     }
     else {
-        FinanceCalculation(getip, fundId, walletId);
+        FinanceCalculation(getip, fundId, walletId); 
+        // my_modal_4.showModal()
     }
+}
+
+
+// TRANSACTION ADDER
+
+function TransFunction(donatedMoney,postID){
+    const newDiv = document.createElement('div'); 
+    newDiv.classList.add('container','mx-auto', 'rounded-2xl','py-8','px-6','border-[#ece6e6]', 'border-2','mb-7') 
+
+    const p1 = document.createElement('p');
+    const p2 = document.createElement('p');
+    const getTittle=document.getElementById(postID).innerText;
+
+    p1.classList.add('text-xl','font-bold', 'mb-3')
+
+    p1.innerText = `${donatedMoney} Taka is Donated for ${getTittle}`; 
+    const time= new Date() 
+    p2.innerText = `DATE: ${time}`;
+    p2.classList.add('font-light','text-base')
+
+    newDiv.appendChild(p1);
+    newDiv.appendChild(p2);
+
+    const transactionSection = document.getElementById('transaction');
+    transactionSection.appendChild(newDiv);
 }

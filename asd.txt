@@ -1,0 +1,65 @@
+make the modal open when #subBTN is clicked and the input is number.
+
+HTML:
+<div class="basis-[60%]">
+    <div class="bg-[#f3f3f3] flex justify-center items-center w-36 py-3 rounded-xl mb-3">
+        <img src="img/coin.png" alt="">
+        <h3 id="CurrentFund3" class="text-[#555555] font-normal text-xl ml-2">2400</h3>
+        <span class="text-[#555555] font-normal text-xl ml-1">BDT</span>
+    </div>
+    <h1 id="post3"  class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
+    <p class="py-6">
+        The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+    </p>
+    <input type="text" placeholder="Write Donation Amount" id="tkInput3" class="input input-bordered w-full mb-3" />
+    <br>
+    <button id="subBTN"  class="btn bg-[#b4f461] w-full text-xl">Donate Now</button>
+</div>
+
+MODAL HTML(DaisyUI):
+
+<button class="btn" onclick="my_modal_4.showModal()">open modal</button>
+<dialog id="my_modal_4" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+JAVASCRIPTS:
+document.getElementById('subBTN').addEventListener('click', function () {
+
+    BalnaceSubmission('tkInput', 'CurrentFund', 'wallet');
+
+    const donatedMoney=getInputById('tkInput');
+ 
+    TransFunction(donatedMoney,'post1')
+
+});
+
+function getInputById(id) {
+    const InputVal = document.getElementById(id).value;
+
+    return parseFloat(InputVal);
+}
+
+function BalnaceSubmission(inputId, fundId, walletId) {
+    const getip = getInputById(inputId);
+
+    if (isNaN(getip)) {
+        alert('Please Enter A number');
+    }
+    else if (getip == 0) {
+        alert('Please Enter More than ZERO');
+    }
+    else {
+        FinanceCalculation(getip, fundId, walletId);
+    }
+}
+
