@@ -1,3 +1,9 @@
+// BLOG BUTTON FUNCTION START
+document.getElementById('logo').addEventListener('click',function(){
+    window.location.href = '../faq.html'
+}) 
+// BLOG BUTTON FUNCTION END 
+
 // BUTTONS FUNCTION START
 
 document.getElementById('transBTN').addEventListener('click',function(){
@@ -27,30 +33,45 @@ document.getElementById('DonatBTN').addEventListener('click',function(){
 // SUBMIT BUTTONS FUNCTION START
 
 document.getElementById('subBTN').addEventListener('click', function () {
+    const donatedMoney=getInputById('tkInput');
+    const walletBalance=getMoneyInNumber('wallet')
+    if(donatedMoney>walletBalance){
+        alert('Donate Amount is Larger than Wallet Balance');
+    }
+    else if(donatedMoney>0 && donatedMoney<=walletBalance){
+        TransFunction(donatedMoney,'post1')
+    }
 
     BalnaceSubmission('tkInput', 'CurrentFund', 'wallet');
-
-    const donatedMoney=getInputById('tkInput');
- 
-    TransFunction(donatedMoney,'post1')
 
 });
 
 
 document.getElementById('subBTN2').addEventListener('click', function () {
+    const donatedMoney=getInputById('tkInput2');
+    const walletBalance=getMoneyInNumber('wallet')
+    if(donatedMoney>walletBalance){
+        alert('Donate Amount is Larger than Wallet Balance');
+    }
+    else if(donatedMoney>0 && donatedMoney<=walletBalance){
+        TransFunction(donatedMoney,'post2')
+    }
+
     BalnaceSubmission('tkInput2', 'CurrentFund2', 'wallet');
     
-    const donatedMoney=getInputById('tkInput2');
- 
-    TransFunction(donatedMoney,'post2')
 });
 
 document.getElementById('subBTN3').addEventListener('click', function () {
-    BalnaceSubmission('tkInput3', 'CurrentFund3', 'wallet');
+    const donatedMoney=getInputById('tkInput2');
+    const walletBalance=getMoneyInNumber('wallet')
+    if(donatedMoney>walletBalance){
+        alert('Donate Amount is Larger than Wallet Balance');
+    }
+    else if(donatedMoney>0 && donatedMoney<=walletBalance){
+        TransFunction(donatedMoney,'post2')
+    }
 
-    const donatedMoney=getInputById('tkInput3');
- 
-    TransFunction(donatedMoney,'post3')
+    BalnaceSubmission('tkInput3', 'CurrentFund3', 'wallet');
 });
 
 // SUBMIT BUTTONS FUNCTION END

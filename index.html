@@ -19,13 +19,13 @@
         <nav class="container mx-auto">
             <div class="navbar bg-[#f9f7f3] py-4">
                 <div class="navbar-start">
-                    <button class="btn bg-[#b4f461] font-semibold text-xl px-5">Blog</button>
+                    <button id="logo" class="btn bg-[#b4f461] font-semibold text-xl px-2 md:px-5">Blog</button>
                 </div>
 
-                <div class="navbar-center hidden lg:flex">
+                <div class="navbar-center lg:flex">
                     <div class="flex gap-2 justify-center items-center">
-                        <img src="img/logo.png" alt="">
-                        <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+                        <img src="img/logo.png" alt="" class="w-7 h-7 md:w-auto md:h-auto">
+                        <h2 class="text-base md:text-xl font-semibold">Donate Bangladesh</h2>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@
                             disaster. Every contribution, big or small, makes a difference. Please join us in supporting
                             the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" id="tkInput"
+                        <input required type="text" placeholder="Write Donation Amount" id="tkInput"
                             class="input input-bordered w-full mb-3" />
                         <br>
                         <button id="subBTN"
@@ -113,7 +113,7 @@
                             counts towards making a real difference. Please consider donating today to assist those in
                             urgent need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" id="tkInput2"
+                        <input required type="text" placeholder="Write Donation Amount" id="tkInput2"
                             class="input input-bordered w-full mb-3" />
                         <br>
                         <button id="subBTN2" class="btn bg-[#b4f461] w-full text-xl">Donate Now</button>
@@ -146,7 +146,7 @@
                             donation plays a vital role in alleviating their suffering and aiding in their recovery.
                             Please consider making a donation to support these brave individuals in their time of need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" id="tkInput3"
+                        <input required type="text" placeholder="Write Donation Amount" id="tkInput3"
                             class="input input-bordered w-full mb-3" />
                         <br>
                         <button id="subBTN3" class="btn bg-[#b4f461] w-full text-xl">Donate Now</button>
@@ -168,7 +168,7 @@
 
     </footer>
 
-    <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+<!-- MODAL START -->
     <dialog id="my_modal_4" class="modal">
         <div class="modal-box w-96 max-w-5xl flex flex-col justify-center items-center">
             <h3 class="text-5xl font-bold mb-4">Congrates!</h3>
@@ -183,7 +183,7 @@
             </div>
         </div>
     </dialog>
-
+<!-- MODAL END -->
 
 
 
