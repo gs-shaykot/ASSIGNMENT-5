@@ -15,24 +15,26 @@
 </head>
 
 <body class="font-lex">
-    <header class="w-full bg-[#f9f7f3] sticky top-0 z-10 shadow-md">
-        <nav class="container mx-auto">
-            <div class="navbar bg-[#f9f7f3] py-4">
-                <div class="navbar-start">
-                    <button id="home" class="btn bg-[#b4f461] font-semibold text-xl px-2 md:px-5">Home</button>
-                </div>
-
-                <div class="navbar-center lg:flex">
-                    <div class="flex gap-2 justify-center items-center">
-                        <img src="img/logo.png" alt="" class="w-7 h-7 md:w-auto md:h-auto">
-                        <h2 class="text-base md:text-xl font-semibold">Donate Bangladesh</h2>
+    <header id="main_header" class="sticky top-0 z-10">
+        <nav id="main-nav" class="w-full bg-[#f9f7f3]">
+            <div class="container mx-auto">
+                <div class="navbar py-4">
+                    <div class="navbar-start">
+                        <button id="logo" class="btn bg-[#b4f461] font-semibold text-xl px-2 md:px-5">Home</button>
                     </div>
-                </div>
 
-                <div class="navbar-end">
-                    <div class="flex gap-2">
-                        <img src="img/coin.png" alt="">
-                        <h3 id="wallet" class="text-xl ">6200</h3>
+                    <div class="navbar-center lg:flex">
+                        <div class="flex gap-2 justify-center items-center">
+                            <img src="img/logo.png" alt="" class="w-7 h-7 md:w-auto md:h-auto">
+                            <h2 class="text-base md:text-xl font-semibold">Donate Bangladesh</h2>
+                        </div>
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="flex gap-2">
+                            <img src="img/coin.png" alt="">
+                            <h3 id="wallet" class="text-xl ">6200</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,7 +52,7 @@
         <section class="container mx-auto w-[95%] lg:w-auto mb-8">
             <div class="collapse collapse-arrow border-2 border-b-0 border-[#ece6e6] rounded-t-md rounded-none">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-title text-base font-medium">What is the Document Object Model (DOM)?</div>
                 <div class="collapse-content">
                     <p>The Document Object Model (DOM) is a speical feature of javascript that represents the structure
                         of a webpage as a tree of objects. It allows scripts to access, modify, and interact with the
@@ -58,49 +60,44 @@
                 </div>
             </div>
 
-            <div class="collapse collapse-arrow border-2 border-b-0 border-[#ece6e6] rounded-none">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse collapse-arrow border-2 border-b-0 border-[#ece6e6] rounded-t-md rounded-none">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-base font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                    <p>
-                        <span class="font-bold">By ID:</span> const element = document.getElementById('elementId');
-                    </p>
-                    <p>
-                        <span class="font-bold">By Class:</span> const elements = document.getElementsByClassName('className');
-                    </p>
-                    <p>
-                        <span class="font-bold">By Tag:</span> const elements = document.getElementsByTagName('tagName');
-                    </p>
-                    <p>
-                        <span class="font-bold">By Query Selector:</span> const element = document.querySelector('selector');
-                        <span class="font-bold">or</span>
-                        const elements = document.querySelectorAll('selector');
-                    </p>
-
+                    <p>Using getElementById('elementId'), getElementsByClassName('className') <br> getElementsByTagName('tagName') <br> querySelector('selector') or <br> querySelectorAll('selector') </p>
                 </div>
             </div>
 
             <div class="collapse collapse-arrow border-2 border-b-0 border-[#ece6e6] rounded-none">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-title text-base font-medium">
+                    What is event delegation in the context of the DOM, and why is it useful?
+                </div>
                 <div class="collapse-content">
-                    <p>It is a technique of the DOM, where we attach only one event listener to a parent element rather than attaching listeners to multiple individual child elements.</p>
-                    <p><span class="font-bold">usefulness: </span>Event delegation is useful because it improves efficiency by reducing the number of event listeners and enhances maintainability by simplifying the management of event listeners in large HTML documents.</p>
+                    <p>It is a technique of the DOM, where we attach only one event listener to a parent element rather
+                        than attaching listeners to multiple individual child elements.</p>
+                    <p><span class="font-bold">usefulness: </span>Event delegation is useful because it improves
+                        efficiency by reducing the number of event listeners and enhances maintainability by simplifying
+                        the management of event listeners in large HTML documents.</p>
                 </div>
             </div>
 
             <div class="collapse collapse-arrow border-2 border-[#ece6e6] rounded-b-md rounded-none">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-title text-base font-medium">How do you manipulate an element's attributes and
+                    styles using the DOM?</div>
                 <div class="collapse-content">
-                    <p>We can use DOM Methods like: <span class="font-bold">getAttribute(attributeName)</span>, <span class="font-bold">removeAttribute(attributeName)</span>, <span class="font-bold">setAttribute(attributeName, value)</span> to manipulate an element's attributes</p>
+                    <p>We can use DOM Methods like: <span class="font-bold">getAttribute(attributeName)</span>, <span
+                            class="font-bold">removeAttribute(attributeName)</span>, <span
+                            class="font-bold">setAttribute(attributeName, value)</span> to manipulate an element's
+                        attributes</p>
                 </div>
             </div>
         </section>
     </main>
 
     <script>
-        document.getElementById('home').addEventListener('click',function(){
+        document.getElementById('home').addEventListener('click', function () {
             window.location.href = 'index.html'
         })
     </script>
