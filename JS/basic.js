@@ -2,6 +2,7 @@
 document.getElementById('logo').addEventListener('click',function(){
     window.location.href = './faq.html'
 }) 
+
 // BLOG BUTTON FUNCTION END 
 
 // BUTTONS FUNCTION START
@@ -33,15 +34,14 @@ document.getElementById('DonatBTN').addEventListener('click',function(){
 // SUBMIT BUTTONS FUNCTION START
 
 document.getElementById('subBTN').addEventListener('click', function () {
-    const donatedMoney=getInputById('tkInput');
+    const donatedMoney=getInputById('tkInput'); 
     const walletBalance=getMoneyInNumber('wallet')
     if(donatedMoney>walletBalance){
         alert('Donate Amount is Larger than Wallet Balance');
     }
     else if(donatedMoney>0 && donatedMoney<=walletBalance){
         TransFunction(donatedMoney,'post1')
-    }
-
+    } 
     BalnaceSubmission('tkInput', 'CurrentFund', 'wallet');
 
 });

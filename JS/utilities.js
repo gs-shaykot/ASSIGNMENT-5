@@ -21,7 +21,7 @@ function BalnaceSubmission(inputId, fundId, walletId) {
     if (isNaN(getip)) {
         alert('Please Enter A number');
     }
-    else if (getip == 0) {
+    else if (getip == 0 || getip<0) {
         alert('Please Enter More than ZERO');
     }
     else {
