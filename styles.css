@@ -10,3 +10,8 @@
     background: #b4f461!important;
     color: #000; 
 }
+
+.glass{
+    background: linear-gradient(135deg, rgba(60,60,60,0.1),rgba(60,60,60,0));
+    backdrop-filter: blur(10px);
+}

@@ -17,6 +17,13 @@ function getMoneyInNumber(id) {
 // INPUT VALIDATION
 function BalnaceSubmission(inputId, fundId, walletId) {
     const getip = getInputById(inputId);
+    const walletBalance = getMoneyInNumber(walletId)
+    if (getip > walletBalance) {
+        alert('Donate Amount is Larger than Wallet Balance');
+    }
+    else if (getip > 0 && getip <= walletBalance) {
+        TransFunction(getip, 'post1')
+    }
 
     if (isNaN(getip)) {
         alert('Please Enter A number');
@@ -70,3 +77,4 @@ function TransFunction(donatedMoney, postID) {
     const transactionSection = document.getElementById('transaction');
     transactionSection.appendChild(newDiv);
 }
+
