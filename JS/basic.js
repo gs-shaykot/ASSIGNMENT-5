@@ -1,6 +1,6 @@
 // BLOG BUTTON FUNCTION START
 document.getElementById('logo').addEventListener('click',function(){
-    window.location.href = '../faq.html'
+    window.location.href = './faq.html'
 }) 
 // BLOG BUTTON FUNCTION END 
 
